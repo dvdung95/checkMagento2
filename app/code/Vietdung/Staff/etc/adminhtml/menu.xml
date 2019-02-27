@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add
+                id="Vietdung_Staff::staff"
+                title="Staff Manager"
+                module="Vietdung_Staff"
+                sortOrder="1"
+                resource="Vietdung_Staff::staff_manager"
+        />
+
+        <add id="Vietdung_Staff::child_staff_manager"
+             title="Menu"
+             module="Vietdung_Staff"
+             sortOrder="12"
+             parent="Vietdung_Staff::staff"
+             resource="Vietdung_Staff::staff_manager"/>
+
+
+    <add
+                id="Vietdung_Staff::list_staff"
+                title="List Staff"
+                module="Vietdung_Staff"
+                action="staff"
+                resource="Vietdung_Staff::list_staff"
+                parent="Vietdung_Staff::staff"/>
+
+
+
+</menu>
+</config>
